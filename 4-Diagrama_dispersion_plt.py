@@ -10,7 +10,7 @@ plt.scatter(tiempo_algebra, notas_algebra, label = 'Algebra',color = 'red')
 plt.scatter(tiempo_quimica, notas_quimica,label = 'Quimica', color = 'purple')
 
 #Definir título y nombres de ejes
-plt.title('Gráfico de dispersión')
+plt.title('Diagrama de dispersión')
 plt.ylabel('Tiempo de estudio')
 plt.xlabel('Horas de estudio')
 
