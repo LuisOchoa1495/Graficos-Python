@@ -1,14 +1,17 @@
 import matplotlib.pyplot as plt
 
-# Define Data Coordinates
-pet = ['Dog', 'Cat', 'Rabbit', 'Parrot', 'Fish']
-owner = [50, 15, 8, 20, 12]
+#Encuesta 200 
+#DATA
+pet=["Dog","Cat","Rabbit","Parrot","Fish"]
+valores=[80,65,25,18,12]
 
-# Plot
-plt.pie(owner, labels=pet,explode=(0.1,0,0,0,0),startangle=90, autopct='%1.1f%%') 
+#PLOT
+plt.pie(valores,labels=pet,explode=(0.1,0,0,0,0),autopct='%1.1f%%')
 
-# Title fontsize
-plt.title('Diagrama de sectores',fontsize=20)
+#title
+plt.title("Diagrama de sectores",fontsize=20)
 
-# Display
-plt.show() 
+plt.savefig("diagrama_sectores.png")
+
+#Display
+plt.show()

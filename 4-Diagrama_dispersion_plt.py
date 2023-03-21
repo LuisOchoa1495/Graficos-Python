@@ -1,20 +1,24 @@
 import matplotlib.pyplot as plt
 
-tiempo_algebra = [1, 3, 5, 7]
-notas_algebra = [10, 12, 14, 16]
-tiempo_quimica = [2, 4 , 6 , 8]
-notas_quimica = [8, 10, 11.5, 13]
+#DATA
+tiempo_algebra=[1,3,5,7]
+notas_algebra=[9,12,14,16]
 
-#Configurar las características del gráfico
-plt.scatter(tiempo_algebra, notas_algebra, label = 'Algebra',color = 'red')
-plt.scatter(tiempo_quimica, notas_quimica,label = 'Quimica', color = 'purple')
+tiempo_quimica=[2,4,6,9]
+notas_quimica=[12,15,13,11]
 
-#Definir título y nombres de ejes
-plt.title('Diagrama de dispersión')
-plt.ylabel('Tiempo de estudio')
-plt.xlabel('Horas de estudio')
+#Caracteristicas
+plt.scatter(tiempo_algebra,notas_algebra,color="black",label="Algebra")
+plt.scatter(tiempo_quimica,notas_quimica,color="red",label="Quimica")
 
-#Mostrar leyenda y figura
-plt.legend()
+#titulo
+plt.title("Diagrama de dispersion")
+plt.xlabel("Horas de estudio")
+plt.ylabel("Notas de estudio")
+
+#Mostar
+plt.legend(loc="upper left")
+
+plt.savefig("diagrama_dispersion.png")
 plt.grid()
 plt.show()
