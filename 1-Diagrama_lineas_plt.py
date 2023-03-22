@@ -9,6 +9,7 @@ sales_b=[11,12,26,32]
 #Configurar las caracteristicas del grafico
 plt.plot(years,sales_a,color='blue',linewidth=3,label='EMPRESA A')
 plt.plot(years,sales_b,color='red',linewidth=3,label='EMPRESA B')
+
 #Definir titulo y nombre de ejes
 plt.title("DIAGRAMA DE LINEA")
 plt.ylabel('Sales')
