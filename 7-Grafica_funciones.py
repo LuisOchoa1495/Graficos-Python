@@ -6,10 +6,10 @@ def funcion1(x):
 
 # Función lineal.
 def funcion2(x):
-    return 4*x + 1
+    return 4*x + 5
 
 # Valores del eje X que toma el gráfico.
-x = range(-10, 15)
+x = range(-15, 15)
 
 # Graficar ambas funciones.
 plt.plot(x, [funcion1(i) for i in x],color="blue")
@@ -21,8 +21,11 @@ plt.axvline(0, color="black")
 
 
 # Limitar los valores de los ejes.
-plt.xlim(-10, 10)
-plt.ylim(-10, 10)
+plt.xlim(-15, 15)
+plt.ylim(-15, 15)
+
+#Titulo
+plt.title("GRAFICA DE FUNCIONES")
 
 # Mostrarlo.
 plt.grid()
