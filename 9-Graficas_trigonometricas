@@ -1,0 +1,21 @@
+import matplotlib.pyplot as plt
+import math
+
+grados = []
+seno = []
+coseno = []
+tangente = []
+
+for i in range(0,540):
+	grados.append(i)
+	radianes = (i* math.pi)/180
+	seno.append(math.sin(radianes))
+	coseno.append(math.cos(radianes))
+	tangente.append(math.tan(radianes))
+
+plt.ylim(-2,2)
+plt.plot(grados,seno,"red")
+plt.plot(grados,coseno,"blue")
+plt.plot(grados,tangente)
+plt.grid()
+plt.show()

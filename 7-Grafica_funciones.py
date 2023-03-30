@@ -11,9 +11,9 @@ def funcion2(x):
 # Valores del eje X que toma el gráfico.
 x = range(-15, 15)
 
-# Graficar ambas funciones.
-plt.plot(x, [funcion1(i) for i in x],color="blue")
-plt.plot(x, [funcion2(i) for i in x],color="red")
+# Graficar ambas funciones. alt+254
+plt.plot(x, [funcion1(i) for i in x],color="blue",label="Funcion Cuadratica: x²")
+plt.plot(x, [funcion2(i) for i in x],color="red",label="Funcion Lineal: 4x+5")
 
 # Establecer el color de los ejes.
 plt.axhline(0, color="black")
@@ -26,6 +26,7 @@ plt.ylim(-15, 15)
 
 #Titulo
 plt.title("GRAFICA DE FUNCIONES")
+plt.legend(loc="lower right")
 
 # Mostrarlo.
 plt.grid()

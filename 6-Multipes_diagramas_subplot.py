@@ -3,12 +3,12 @@ import matplotlib.pyplot as plt
 dolares = [7000, 6500 , 7400 , 8500]
 years = [2019, 2020, 2021, 2022]
 
-#2 filas,1 columna 
-plt.subplot(1, 2, 1)
+#2 filas,2 columna 
+plt.subplot(2, 2, 1)
 plt.plot(years,dolares,linewidth=3)
 plt.xticks(years)
 plt.ylabel("Dolares")
-plt.title("Ventas Anuales",fontsize=15)
+plt.title("Ventas Anuales",fontsize=12)
 
 plt.grid()
 
@@ -17,11 +17,11 @@ productos=["Cuadernos","Lapiceros","Reglas","Hojas","Folders","Otros"]
 cantidad=[5000,10000,6000,8000,3000,2000]
 
 #2 filas,2columna,pisicion 
-plt.subplot(1, 2, 2)
+plt.subplot(2, 2, 2)
 plt.pie(cantidad,labels=productos,autopct='%1.0f%%')
-plt.title("Productos mas vendidos",fontsize=15)
+plt.title("Productos mas vendidos",fontsize=12)
 
-"""
+
 #------plot 3:
 #DATA
 tiempo_algebra=[1,3,5,7]
@@ -36,7 +36,7 @@ plt.scatter(tiempo_algebra,notas_algebra,color="black",label="Algebra")
 plt.scatter(tiempo_quimica,notas_quimica,color="red",label="Quimica")
 
 #titulo
-plt.title("Diagrama de dispersion",fontsize=15)
+plt.title("Diagrama de dispersion",fontsize=12)
 plt.xlabel("Horas de estudio")
 plt.ylabel("Notas de estudio")
 
@@ -49,10 +49,10 @@ years=[2015,2016,2018,2019,2020,2021,2022]
 plt.subplot(2,2,4)
 plt.fill_between(years,sales_a,label="EMPRESA A",color="green")
 plt.fill_between(years,sales_b,label="EMPRESA B",color="blue")
-plt.title("Diagrama de areas", fontsize=15)
+plt.title("Diagrama de areas", fontsize=12)
 
 plt.legend(loc="upper left")
-"""
+
 "----------------------------------------------------------------"
-plt.suptitle("------------MIS VENTAS-----------",fontsize=20)
+plt.suptitle("MIS VENTAS",fontsize=18)
 plt.show()
