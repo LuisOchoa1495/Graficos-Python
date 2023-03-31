@@ -19,7 +19,6 @@ plt.plot(x, [funcion2(i) for i in x],color="red",label="Funcion Lineal: 4x+5")
 plt.axhline(0, color="black")
 plt.axvline(0, color="black")
 
-
 # Limitar los valores de los ejes.
 plt.xlim(-15, 15)
 plt.ylim(-15, 15)

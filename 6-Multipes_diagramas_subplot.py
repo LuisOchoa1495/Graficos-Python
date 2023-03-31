@@ -21,7 +21,6 @@ plt.subplot(2, 2, 2)
 plt.pie(cantidad,labels=productos,autopct='%1.0f%%')
 plt.title("Productos mas vendidos",fontsize=12)
 
-
 #------plot 3:
 #DATA
 tiempo_algebra=[1,3,5,7]
@@ -54,5 +53,5 @@ plt.title("Diagrama de areas", fontsize=12)
 plt.legend(loc="upper left")
 
 "----------------------------------------------------------------"
-plt.suptitle("MIS VENTAS",fontsize=18)
+plt.suptitle("MULTIPLES DIAGRAMAS",fontsize=18)
 plt.show()
