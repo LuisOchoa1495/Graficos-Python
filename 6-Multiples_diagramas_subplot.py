@@ -10,7 +10,7 @@ plt.xticks(years)
 plt.ylabel("Dolares")
 plt.title("Ventas Anuales",fontsize=12)
 
-plt.grid()
+#plt.grid()
 
 #------plot 2:
 productos=["Cuadernos","Lapiceros","Reglas","Hojas","Folders","Otros"]
@@ -54,4 +54,5 @@ plt.legend(loc="upper left")
 
 "----------------------------------------------------------------"
 plt.suptitle("MULTIPLES DIAGRAMAS",fontsize=18)
+
 plt.show()
