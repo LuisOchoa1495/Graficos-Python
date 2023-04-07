@@ -1,19 +1,15 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-
-# Semilla para reproducibilidad
-np.random.seed(2)
-
 # Datos
-data = np.random.random((8, 12))
+data = np.random.random((6, 12))
 
 # Etiquetas
 xlabs = ["ENERO", "FEBRERO", "MARZO", "ABRIL",
          "MAYO", "JUNIO", "JULIO", "AGOSTO","SEPTIEMBRE",
          "OCTUBRE","NOVIEMBRE", "DICIEMBRE"]
-ylabs = ["LIMA", "PIURA", "AYACUCHO", "CUSCO",
-         "AREQUIPA", "CAJAMARCA", "PUNO", "ICA"]
+ylabs = ["LIMA", "PIURA", "AREQUIPA", "CUSCO",
+        "PUNO", "ICA"]
          
 # Mapa de calor
 fig, ax = plt.subplots()
@@ -32,12 +28,9 @@ for i in range(len(ylabs)):
     for j in range(len(xlabs)):
         text = ax.text(j, i, round(data[i, j],1),ha="center", va="center", color="white")
 
-
-
 plt.setp(ax.get_xticklabels(), rotation = 40,
          ha = "right", rotation_mode = "anchor")
 
-
-plt.title("Grafica de calor")
+plt.title("GRAFICA DE CALOR")
 plt.show()
 
