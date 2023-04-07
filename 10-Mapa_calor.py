@@ -31,6 +31,6 @@ for i in range(len(ylabs)):
 plt.setp(ax.get_xticklabels(), rotation = 40,
          ha = "right", rotation_mode = "anchor")
 
-plt.title("GRAFICA DE CALOR")
+plt.title("MAPA DE CALOR")
 plt.show()
 

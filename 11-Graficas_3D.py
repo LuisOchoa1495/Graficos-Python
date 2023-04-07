@@ -27,5 +27,5 @@ plano.set_ylabel('EJE Y')
 plano.set_zlabel('EJE Z')
 
 # Mostramos el gráfico
-plt.title("Grafica 3D")
+plt.title("GRAFICAS 3D")
 plt.show()
