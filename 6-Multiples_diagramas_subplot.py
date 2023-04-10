@@ -54,5 +54,4 @@ plt.legend(loc="upper left")
 
 "----------------------------------------------------------------"
 plt.suptitle("MULTIPLES DIAGRAMAS",fontsize=18)
-
 plt.show()
