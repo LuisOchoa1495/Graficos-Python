@@ -14,8 +14,8 @@ fig=plt.figure()
 ax=fig.add_subplot(1,1,1)
 
 ax.plot(x, fn_1(x),label="Seno")
-#ax.plot(x, fn_2(x),label="Coseno")
-#ax.plot(x, fn_3(x),label="Tangente")
+ax.plot(x, fn_2(x),label="Coseno")
+ax.plot(x, fn_3(x),label="Tangente")
 ax.set_xticks(points)
 ax.set_xticklabels(labels)
 
