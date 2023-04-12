@@ -2,12 +2,12 @@ import math
 import matplotlib.pyplot as plt
 import numpy as np
 
-#funciones
+#funcioens
 fn_1 = np.sin
 fn_2 = np.cos
 fn_3 = np.tan
 
-x = np.linspace(-2*np.pi, 2*np.pi)
+x=np.linspace(-2*np.pi, 2*np.pi)
 points = [i * np.pi/2 for i in range(-4, 5)]
 labels = ["-2π", "-3π/2", "-π", "-π/2", "0", "π/2", "π", "3π/2", "2π"]
 
