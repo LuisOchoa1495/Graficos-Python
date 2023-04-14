@@ -28,9 +28,8 @@ for i in range(len(ylabs)):
     for j in range(len(xlabs)):
         text = ax.text(j, i, round(data[i, j],1),ha="center", va="center", color="white")
 
-plt.setp(ax.get_xticklabels(), rotation = 40,
-         ha = "right", rotation_mode = "anchor")
+plt.setp(ax.get_xticklabels(), rotation = 40, ha = "right", rotation_mode = "anchor")
 
-plt.title("MAPA DE CALOR")
+plt.title("MAPA DE CALOR - CORONAVIRUS (2022)")
 plt.show()
 
