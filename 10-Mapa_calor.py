@@ -23,7 +23,7 @@ ax.set_yticks(np.arange(len(ylabs)), labels = ylabs)
 cbar = ax.figure.colorbar(im, ax = ax)
 cbar.ax.set_ylabel("Leyenda", rotation = -90, va = "bottom")
 
-# Loop over data dimensions and create text annotations.
+# AGREGAR LOS VALORES A LA GRAFICA
 for i in range(len(ylabs)):
     for j in range(len(xlabs)):
         text = ax.text(j, i, round(data[i, j],1),ha="center", va="center", color="white")
