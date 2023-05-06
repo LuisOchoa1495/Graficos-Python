@@ -1,24 +1,28 @@
-import numpy as np
+from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import axes3d
+from matplotlib.ticker import LinearLocator, FormatStrFormatter
+import numpy as np
 
-vector1 = np.array([[4,4,9,4]])
-vector2 = np.array([[2,2,2,2]])
-vector3 = np.array([[7,5,7,7]])
+fig = plt.figure()
+# Tipo de figura
+ax = fig.gca(projection='3d')
+# Datos
+X = np.arange(-4, 4, 0.3)
+Y = np.arange(-4, 4, 0.3)
+X, Y = np.meshgrid(X, Y)
+R = np.sqrt(X**2 + Y**2)
+Z = np.sin(R)
 
-figura=plt.figure()
-plano=figura.add_subplot(111,projection='3d')
+# Graficamos o trazamos la superficie
+surf = ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap='jet')
+# Personalizamos el ejex z
+ax.set_zlim(-1, 1)
+ax.zaxis.set_major_locator(LinearLocator(8))
+ax.zaxis.set_major_formatter(FormatStrFormatter('%.01f'))
 
-plano.plot_wireframe(vector1,vector2,vector3)
-plano.scatter(4,5,6,color='green',marker='o')
+ax.set_xlabel('EJE X')
+ax.set_ylabel('EJE Y')
+ax.set_zlabel('EJE Z')
 
-plano.set_xlim([0,10])
-plano.set_ylim([0,10])
-plano.set_zlim([0,10])
-
-plano.set_xlabel('EJE X')
-plano.set_ylabel('EJE Y')
-plano.set_zlabel('EJE Z')
-
-plt.title("GRAFICAS 3D")
+plt.title("GRAFICA 3D - FUNCIONES")
 plt.show()
