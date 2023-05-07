@@ -1,28 +1,31 @@
-from mpl_toolkits.mplot3d import Axes3D
-import matplotlib.pyplot as plt
-from matplotlib.ticker import LinearLocator, FormatStrFormatter
+#IMPORTAMOS LIBRERIAS.
 import numpy as np
+import matplotlib.pyplot as plt
+import animatplot as amp
 
-fig = plt.figure()
-# Tipo de figura
-ax = fig.gca(projection='3d')
-# Datos
-X = np.arange(-4, 4, 0.3)
-Y = np.arange(-4, 4, 0.3)
-X, Y = np.meshgrid(X, Y)
-R = np.sqrt(X**2 + Y**2)
-Z = np.sin(R)
+#INTRODUCIMOS DATOS.
+x = np.linspace(0, 1, 50)
+t = np.linspace(0, 1, 20)
 
-# Graficamos o trazamos la superficie
-surf = ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap='jet')
-# Personalizamos el ejex z
-ax.set_zlim(-1, 1)
-ax.zaxis.set_major_locator(LinearLocator(8))
-ax.zaxis.set_major_formatter(FormatStrFormatter('%.01f'))
+X, T = np.meshgrid(x, t)
+Y = np.sin(2*np.pi*(X+T))
 
-ax.set_xlabel('EJE X')
-ax.set_ylabel('EJE Y')
-ax.set_zlabel('EJE Z')
+#CREAMOS OBJETO "timeline".
+timeline = amp.Timeline(t, units='s', fps=20)
 
-plt.title("GRAFICA 3D - FUNCIONES")
+#GENERAMOS ANIMACIÓN.
+block = amp.blocks.Line(X, Y, marker=".", linestyle="-", color="r")
+anim = amp.Animation([block],timeline)
+
+#DEFINICIÓN DE ETIQUETAS PARA TITULO Y EJES.
+plt.title("Sine Wave")
+plt.xlabel("x")
+plt.ylabel("y")
+
+
+#INTRODUCIMOS LÍNEA DE TIEMPO
+#Y BOTÓN PAUSE/PLAY
+anim.controls()
+
+#REPRESENTAMOS GRÁFICA.
 plt.show()
