@@ -12,4 +12,4 @@ writer = pd.ExcelWriter('Notas.xlsx')
 df_marks.to_excel(writer)
 # save the excel
 writer.save()
-print('Archivo de escelc reado exitosamente')
+print('Archivo de excel creado exitosamente')

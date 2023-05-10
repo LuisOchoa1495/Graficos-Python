@@ -9,7 +9,9 @@ ax = fig.gca(projection='3d')
 # Datos
 X = np.arange(-4, 4, 0.3)
 Y = np.arange(-4, 4, 0.3)
+#vectores de coordenadas
 X, Y = np.meshgrid(X, Y)
+#raiz cuadrada
 R = np.sqrt(X**2 + Y**2)
 Z = np.sin(R)
 
