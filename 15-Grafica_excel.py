@@ -7,14 +7,11 @@ df = pd.read_excel(workbook)
 print(df.head())
 
 datos=df[{"name","Algebra","Quimica"}]
-x=np.arange(len(datos))
-algebra=df[{"Algebra"}]
-quimica=df[{"Quimica"}]
-df['name'] = df['name'].astype("string") # Let them be strings!
-print(algebra)
-fig, ax = plt.subplots()
-#datos.plot.bar(x=["name"], y=["Algebra"],width=width,rot=0)
-df.plot(x=['name'], y=['Algebra','Quimica'],kind="bar",rot=0,ax=ax)
 
-
+datos.plot.bar(x="name", y="Algebra",width=width,rot=0)
+datos.plot(x="name",kind="bar",rot=0)
+plt.title("Puntajes")
+plt.xlabel("Nombres")
+plt.ylabel("Puntajes")
+plt.grid()
 plt.show()
