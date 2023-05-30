@@ -1,15 +1,12 @@
 import pandas as pd
-import re
-desired_width = 320
-pd.set_option('display.width', desired_width)
+import matplotlib.pyplot as plt
 
+tables=pd.read_html('https://www.nbamaniacs.com/palmares-nba/')
+print(f'Número total de tablas: {len(tables)}')
 
-# Leer las tablas en pandas
-inflation_tables = pd.read_html('https://en.wikipedia.org/wiki/List_of_countries_by_inflation_rate')
-
-# Imprimir el número total de tablas
-print(f'Número total de tablas: {len(inflation_tables)}')
-
-# Imprimir las primeras filas de todas las tablas en la página
-for i in range(len(inflation_tables)):
-  print(inflation_tables[i].head())
+datos=(tables[0].head())
+dataframe=pd.DataFrame(datos[{'Franquicia','Títulos'}])
+print(dataframe)
+dataframe.plot(x="Franquicia",kind="bar",rot=10)
+plt.title("Top 5 - Ganadores NBA")
+plt.show()
