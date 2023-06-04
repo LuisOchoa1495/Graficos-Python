@@ -11,9 +11,10 @@ print(dataframe)
 
 dataframe.plot(x="Franquicia",kind="bar",rot=10)
 plt.title("TOP 5 - CAMPEONES NBA")
+plt.xticks(fontsize=9)
 plt.show()
 """
-#imprimi tablas
+#imprimir tablas
 for i in range(len(tables)):
     print(tables[i])
 """
