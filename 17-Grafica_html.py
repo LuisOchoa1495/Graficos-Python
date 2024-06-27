@@ -6,7 +6,9 @@ tables=pd.read_html('https://www.nbamaniacs.com/palmares-nba/')
 
 print(f'Numero de tablas:{len(tables)}')
 datos=(tables[0].head())
-dataframe=pd.DataFrame(datos[{'Franquicia','Títulos'}])
+print(datos)
+
+dataframe=pd.DataFrame(datos[['Franquicia','Títulos']])
 print(dataframe)
 
 dataframe.plot(x="Franquicia",kind="bar",rot=10)
